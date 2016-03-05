@@ -57,13 +57,13 @@ public class BallController : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) 
 	{
-		// string collidedObject = other.gameObject.tag;
-		// switch (collidedObject) {
-		// 	case "Target":
-		// 			gameObject.SetActive (false);
+			string collidedObject = other.gameObject.tag;
+		 	switch (collidedObject) {
+		 	case "enemy":
+			 			Time.timeScale = 0;
 		// 			playerShadow.SetActive(false);
 		// 			Invoke ("closeApp", 1);
-		// 			break;
+		 			break;
 		// 	case "Coin":
 		// 			score = score + 1;   
 		// 			break;
@@ -86,9 +86,9 @@ public class BallController : MonoBehaviour {
 		// 			Physics.gravity = Vector3.down * 1000;
 		// 			Invoke ("gameTimeOut", 2);
 		// 			break;
-		// 	default:
-		// 			break;
-		// 		}
+		 	default:
+		 			break;
+		 		}
 
 	 }
 
